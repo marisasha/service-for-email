@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css_js/css.css" />
+    <link rel="stylesheet" href="/static/css_js/css2.css" />
+    <title>{% block title%}{% endblock title%}</title>
+</head>
+<body class="bg-slate-300">
+    {% include "components/Navbar.html" %}
+    <div class=" flex mx-20 mt-48 gap-x-2 ">
+        <div class="w-full pb-40">
+            {% block main%} {% endblock main%}
+        </div>
+    </div>  
+</body>
+</html>

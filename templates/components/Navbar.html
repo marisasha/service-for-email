@@ -1,0 +1,9 @@
+{% if request.user.is_authenticated %}
+<header class="inset-x-0 top-0 z-0 bg-gray-800 fixed">
+  <nav class="flex items-center gap-x-20 mt-8 ml-8 mr-8 mb-3" aria-label="Global">
+      <a href="{% url 'home' %}"><span class = " font-semibold text-l text-slate-100 hover:text-slate-300" >Главная</span></a>
+      <a href="{% url 'message' %}"><span class = " font-semibold text-l text-slate-100 hover:text-slate-300" >Сообщения</span></a>
+      <a href="{% url 'logout' %}"><span class = " font-semibold text-l text-slate-100 hover:text-slate-300" >Выйти из аккаунта</span></a>
+  </nav>
+</header>
+{% endif %}
