@@ -12,7 +12,7 @@ from email.header import decode_header
 import chardet
 
 
-def login_user(request):
+def login_user(request: HtttpRequest):
     if request.method == "GET":
         return render(request, "Login.html")
     elif request.method == "POST":
@@ -29,7 +29,7 @@ def login_user(request):
         return redirect(reverse("home"))
 
 
-def register(request):
+def register(request: HtttpRequest):
     if request.method == "GET":
         return render(request, "register.html")
     elif request.method == "POST":
@@ -51,14 +51,14 @@ def register(request):
         return redirect(reverse("home"))
 
 
-def logout_user(request):
+def logout_user(request: HtttpRequest):
     logout(request)
     return redirect(reverse("login"))
 
 
-def home(request):
+def home(request: HtttpRequest):
     return render(request=request, template_name="Home.html", context={})
 
 
-def message(request):
+def message(request: HtttpRequest):
     return render(request=request, template_name="Message.html", context={})
