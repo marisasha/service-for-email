@@ -10,6 +10,7 @@ import imaplib
 import email
 from email.header import decode_header
 import chardet
+from django.http import HttpRequest
 
 
 def login_user(request: HtttpRequest):
